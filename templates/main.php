@@ -4,28 +4,13 @@ Template Name: Main
 */
 get_header(); ?>
 
-<header id="front-hero" role="banner">
-	<div class="marketing">
-		<div class="tagline">
-			<h1><a href="<?php bloginfo( 'url' ); ?>" title="<?php bloginfo( 'name' ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
-			<h4 class="subheader"><?php bloginfo( 'description' ); ?></h4>
-		</div>
 
-		<div id="watch" class="small-12 columns">
-			<section id="stargazers">
-				<a href="https://pokemon.game-solver.com/pokedex/">Pokedex</a>
-			</section>
-			<section id="twitter">
-				<a href="https://pokemon.game-solver.com/type/">Type</a>
-			</section>
-		</div>
-
-	</div>
-
-</header>
-<?php
-?>
 	<div class="row">
+	<?php
+echo '<div class="medium-4 columns">
+<p><img src="http://placehold.it/900x450&text=Promoted Article" alt="main article image"></p>
+</div>'
+?>
 		<?php get_template_part( 'parts/check-if-sidebar-exist' ); ?>
 		<?php do_action( 'foundationpress_before_content' ); ?>
 

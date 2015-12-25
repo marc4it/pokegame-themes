@@ -3,7 +3,7 @@
  * The template for displaying the footer
  *
  * Contains the closing of the "off-canvas-wrap" div and all content after.
- *
+ * test
  * @package WordPress
  * @subpackage FoundationPress
  * @since FoundationPress 1.0.0

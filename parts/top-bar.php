@@ -17,8 +17,29 @@
             <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
         </ul>
         <section class="top-bar-section">
-            <?php foundationpress_top_bar_l(); ?>
-            <?php foundationpress_top_bar_r(); ?>
+			<ul class="left">
+            <li><a href="https://pokemon.game-solver.com/pokedex/">Pokedex</a></li>
+            <li><a href="https://pokemon.game-solver.com/type/">Types</a></li>
+            <li class="has-dropdown">
+            	<a href="#">Skills</a>
+            		<ul class="dropdown">
+            			<li><a href="https://pokemon.game-solver.com/move/">Moves</a></li>
+                		<li><a href="https://pokemon.game-solver.com/abilities/">Abilities</a></li>
+                		<li><a href="https://pokemon.game-solver.com/hm/">HM Moves</a></li>
+                	</ul>
+                </li>
+            <li class="has-dropdown">
+            	<a href="#">Items</a>
+            		<ul class="dropdown">
+            			<li><a href="https://pokemon.game-solver.com/">Pokeballs</a></li>
+                		<li><a href="https://pokemon.game-solver.com/">Potions</a></li>
+                	</ul>
+                </li>
+        </section>
+        <section class="top-bar-section">
+        	<ul class="right">
+        		<li><a href="https://pokemon.game-solver.com/about-us/">About Us</a></li>
+        	</ul>
         </section>
     </nav>
 </div>
@@ -56,26 +77,29 @@ if ($path[1] == "pokedex" && ($path[2])) {
 			</div>
 		</div>';
 		
+} elseif ($path[1] == "about-us") {
+	
 } elseif (($path[1]) && ($path[2])) {
 
-		echo '<div class="row">
-				<div class="small-12 columns">
-					<ul class="breadcrumbs">
-						<li><a href="/">Home</a></li>
-						<li><a href="'.$crumbString1.'">'.$path[1].'</a></li>
-						<li class="current"><a href="'.$crumbString2.'">'.no_dash($path[2]).'</a></li>
-					</ul>
-				</div>
-			</div>';
+	echo '<div class="row">
+			<div class="small-12 columns">
+				<ul class="breadcrumbs">
+					<li><a href="/">Home</a></li>
+					<li><a href="'.$crumbString1.'">'.$path[1].'</a></li>
+					<li class="current"><a href="'.$crumbString2.'">'.no_dash($path[2]).'</a></li>
+				</ul>
+			</div>
+		</div>';
 		
 } elseif (($path[1]) && $path[2] == "") {
 	
-		echo '<div class="row">
-				<div class="small-12 columns">
-					<ul class="breadcrumbs">
-						<li><a href="/">Home</a></li>
-						<li class="current"><a href="'.$crumbString1.'">'.$path[1].'</a></li>
-					</ul>
-				</div>
-			</div>';
+	echo '<div class="row">
+			<div class="small-12 columns">
+				<ul class="breadcrumbs">
+					<li><a href="/">Home</a></li>
+					<li class="current"><a href="'.$crumbString1.'">'.$path[1].'</a></li>
+				</ul>
+			</div>
+		</div>';
+		
 }
